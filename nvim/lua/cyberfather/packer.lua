@@ -22,6 +22,9 @@ return require('packer').startup(function(use)
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use('NoahTheDuke/vim-just')
+  use('IndianBoy42/tree-sitter-just')
+  use('tomtom/tcomment_vim')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',

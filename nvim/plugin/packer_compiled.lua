@@ -140,10 +140,20 @@ _G.packer_plugins = {
     path = "/home/cyberfather/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  tcomment_vim = {
+    loaded = true,
+    path = "/home/cyberfather/.local/share/nvim/site/pack/packer/start/tcomment_vim",
+    url = "https://github.com/tomtom/tcomment_vim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/cyberfather/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tree-sitter-just"] = {
+    loaded = true,
+    path = "/home/cyberfather/.local/share/nvim/site/pack/packer/start/tree-sitter-just",
+    url = "https://github.com/IndianBoy42/tree-sitter-just"
   },
   undotree = {
     loaded = true,
@@ -154,6 +164,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cyberfather/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-just"] = {
+    loaded = true,
+    path = "/home/cyberfather/.local/share/nvim/site/pack/packer/start/vim-just",
+    url = "https://github.com/NoahTheDuke/vim-just"
   }
 }
 
