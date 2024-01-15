@@ -1,1 +1,0 @@
-/home/cyberfather/.config/tmux
