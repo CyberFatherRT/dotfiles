@@ -23,9 +23,13 @@ return require('packer').startup(function(use)
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('NoahTheDuke/vim-just')
+    use('laytan/cloak.nvim')
+    
+    use('alec-gibson/nvim-tetris')
+
     use('IndianBoy42/tree-sitter-just')
     use('tomtom/tcomment_vim')
-    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+    use({'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'})
 
     use {
         'VonHeikemen/lsp-zero.nvim',
