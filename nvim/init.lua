@@ -1,1 +1,2 @@
-require('cyberfather')
+require("cyberfather")
+
