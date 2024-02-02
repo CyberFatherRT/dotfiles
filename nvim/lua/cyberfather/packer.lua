@@ -2,7 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
 
-    use 'wbthomason/packer.nvim'
+    use('wbthomason/packer.nvim')
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -24,7 +24,15 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use('NoahTheDuke/vim-just')
     use('laytan/cloak.nvim')
-    
+
+    use({
+        "jose-elias-alvarez/null-ls.nvim",
+        opts = function()
+            return require("after.null-ls")
+        end,
+        requires = { "nvim-lua/plenary.nvim" },
+    })
+
     use('alec-gibson/nvim-tetris')
 
     use('IndianBoy42/tree-sitter-just')
