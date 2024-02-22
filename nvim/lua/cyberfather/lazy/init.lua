@@ -4,8 +4,10 @@ return {
         name = "plenary"
     },
 
+    "xiyaowong/transparent.nvim",
+    "kraftwerk28/gtranslate.nvim",
     "dhruvasagar/vim-zoom",
-    "tomtom/tcomment_vim",
+    "numToStr/Comment.nvim",
     "github/copilot.vim",
     "eandrju/cellular-automaton.nvim",
     "gpanders/editorconfig.nvim",

@@ -33,6 +33,15 @@ return {
         })
 
         local treesitter_parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+
+        treesitter_parser_config.just = {
+            install_info = {
+                url = "https://github.com/IndianBoy42/tree-sitter-just",
+                files = { "src/parser.c", "src/scanner.c" },
+                branch = "main",
+            },
+        }
+
         treesitter_parser_config.templ = {
             install_info = {
                 url = "https://github.com/vrischmann/tree-sitter-templ.git",
