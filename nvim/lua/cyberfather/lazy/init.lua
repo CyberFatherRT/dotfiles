@@ -7,6 +7,8 @@ return {
     "mg979/vim-visual-multi",
     "xiyaowong/transparent.nvim",
     "kraftwerk28/gtranslate.nvim",
+    "mfussenegger/nvim-dap",
+    "ThePrimeagen/vim-be-good",
     "dhruvasagar/vim-zoom",
     "numToStr/Comment.nvim",
     "github/copilot.vim",
