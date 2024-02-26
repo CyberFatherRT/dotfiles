@@ -1,9 +1,13 @@
 function ColorMyPencils(color)
+
 	color = color or "rose-pine"
 	vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "none", fg = "#89b4fa"})
+
 end
 
 return {
@@ -39,16 +43,11 @@ return {
 
             vim.cmd("colorscheme rose-pine")
 
-            -- ColorMyPencils()
+            ColorMyPencils()
         end
     },
 
-    {
-        "doums/darcula"
-    },
-
-    {
-        "catppuccin/nvim",
-    }
-
+    { "doums/darcula" },
+    { "catppuccin/nvim" },
+    { "rodnaph/vim-color-schemes" },
 }
