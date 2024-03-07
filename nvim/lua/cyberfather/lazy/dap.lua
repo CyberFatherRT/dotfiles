@@ -7,8 +7,7 @@ return {
         "williamboman/mason.nvim",
         "mfussenegger/nvim-dap-python",
     },
-    config = function ()
-
+    config = function()
         require('dap-python').setup()
 
         local dap, ui = require('dap'), require('dapui')
@@ -24,12 +23,13 @@ return {
         dap.listeners.after.event_initialized["dapui_config"] = function()
             ui.open()
         end
+
         dap.listeners.before.event_initialized["dapui_config"] = function()
             ui.open()
         end
-        dap.listeners.before.event_exited["dapui_config"] = function()
-            ui.open()
-        end
 
+        dap.listeners.before.event_exited["dapui_config"] = function()
+            ui.close()
+        end
     end
 }
