@@ -6,6 +6,7 @@ return {
 			log_level = vim.log.levels.WARN,
 			filetype = {
 				rust = require("formatter.filetypes.rust").rustfmt,
+				go = require("formatter.filetypes.go").gofmt,
 				lua = require("formatter.filetypes.lua").stylua,
 				python = require("formatter.filetypes.python").ruff,
 				svelte = require("formatter.filetypes.svelte").prettier,
