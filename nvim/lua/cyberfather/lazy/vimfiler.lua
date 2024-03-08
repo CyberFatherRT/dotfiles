@@ -1,5 +1,4 @@
 return {
-    "Shougo/vimfiler.vim",
-    dependencies = { "Shougo/unite.vim" }
+	"Shougo/vimfiler.vim",
+	dependencies = { "Shougo/unite.vim" },
 }
-
