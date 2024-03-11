@@ -1,7 +1,7 @@
 return {
 	{
 		dependencies = { "nvim-telescope/telescope.nvim" },
-		dir = "~/personal/license-nvim",
+		dir = "~/personal/license.nvim",
 		config = function()
 			local license = require("license")
 			license.setup("CyberFatherRT")
@@ -22,6 +22,12 @@ return {
 			vim.keymap.set("n", "<leader>rf", function()
 				rfc.list_rfcs()
 			end)
+		end,
+	},
+	{
+		dir = "~/personal/compile.nvim",
+		config = function()
+			require("compile")
 		end,
 	},
 }

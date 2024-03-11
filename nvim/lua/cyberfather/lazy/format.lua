@@ -1,17 +1,45 @@
 return {
 	"mhartington/formatter.nvim",
 	config = function()
+		local util = require("formatter.util")
+
+		local c = function()
+			return {
+				exe = "clang-format",
+				args = {
+					[[--style="{IndentWidth: 4, TabWidth: 4}"]],
+					"--assume-filename",
+					util.escape_path(util.get_current_buffer_file_path()),
+				},
+				stdin = true,
+			}
+		end
+
 		require("formatter").setup({
 			logging = true,
 			log_level = vim.log.levels.WARN,
 			filetype = {
 				rust = require("formatter.filetypes.rust").rustfmt,
+				cpp = c,
+				c = c,
 				go = require("formatter.filetypes.go").gofmt,
 				lua = require("formatter.filetypes.lua").stylua,
 				python = require("formatter.filetypes.python").ruff,
 				svelte = require("formatter.filetypes.svelte").prettier,
 				typescript = require("formatter.filetypes.typescript").prettier,
-				json = require("formatter.filetypes.json").prettier,
+				javascript = require("formatter.filetypes.javascript").prettier,
+				json = function()
+					return {
+						exe = "prettier",
+						args = {
+							"--stdin-filepath",
+							"--no-config",
+							util.escape_path(util.get_current_buffer_file_path()),
+						},
+						stdin = true,
+						try_node_modules = true,
+					}
+				end,
 			},
 		})
 

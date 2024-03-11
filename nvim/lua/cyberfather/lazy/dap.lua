@@ -6,12 +6,19 @@ return {
 		"theHamsta/nvim-dap-virtual-text",
 		"williamboman/mason.nvim",
 		"mfussenegger/nvim-dap-python",
+		"leoluz/nvim-dap-go",
 	},
+
 	config = function()
+		require("nvim-dap-virtual-text").setup()
 		require("dap-python").setup()
+		require("dap-go").setup()
+		require("mason-nvim-dap").setup({
+			ensure_installed = { "cppdbg", "node2" },
+			handlers = {},
+		})
 
 		local dap, ui = require("dap"), require("dapui")
-
 		ui.setup()
 
 		vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint)
