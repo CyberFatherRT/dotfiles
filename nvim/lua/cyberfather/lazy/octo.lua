@@ -10,6 +10,7 @@ return {
 		vim.cmd([[hi OctoEditable guibg=none]])
 	end,
 	keys = {
-		{ "<leader>o", "<cmd>Octo<cr>", desc = "Octo" },
+		{ "<leader>oic", "<cmd>Octo issue create<cr>", desc = "Octo issue create" },
+		{ "<leader>oil", "<cmd>Octo issue list<cr>", desc = "Octo issue create" },
 	},
 }
