@@ -28,3 +28,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
+
+vim.g.vimtex_view_method = "mupdf"
+vim.g.maplocalleader = ","

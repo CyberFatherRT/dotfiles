@@ -4,6 +4,8 @@ return {
 		name = "plenary",
 	},
 
+	"lervag/vimtex",
+	"tpope/vim-surround",
 	"mg979/vim-visual-multi",
 	"xiyaowong/transparent.nvim",
 	"mfussenegger/nvim-dap",

@@ -25,6 +25,12 @@ return {
 		end,
 	},
 	{
+		dir = "~/personal/vgm.nvim",
+		config = function()
+			require("vgm")
+		end,
+	},
+	{
 		dir = "~/personal/compile.nvim",
 		config = function()
 			require("compile")

@@ -23,11 +23,16 @@ return {
 				cpp = c,
 				c = c,
 				go = require("formatter.filetypes.go").gofmt,
+				sh = require("formatter.filetypes.sh").shfmt,
 				lua = require("formatter.filetypes.lua").stylua,
 				python = require("formatter.filetypes.python").ruff,
 				svelte = require("formatter.filetypes.svelte").prettier,
 				typescript = require("formatter.filetypes.typescript").prettier,
 				javascript = require("formatter.filetypes.javascript").prettier,
+				tex = require("formatter.defaults.latexindent"),
+				yaml = require("formatter.filetypes.yaml").prettier,
+				html = require("formatter.filetypes.html").prettier,
+				css = require("formatter.filetypes.css").prettier,
 				json = function()
 					return {
 						exe = "prettier",

@@ -25,6 +25,7 @@ return {
 
 			highlight = {
 				enable = true,
+				disable = { "latex" },
 				additional_vim_regex_highlighting = { "markdown" },
 			},
 
@@ -35,6 +36,10 @@ return {
 					keymaps = {
 						["af"] = "@function.outer",
 						["if"] = "@function.inner",
+						["al"] = "@loop.outer",
+						["il"] = "@loop.inner",
+						-- ["ai"] = "@conditional.outer",
+						-- ["ii"] = "@conditional.inner",
 						["ac"] = "@class.outer",
 						["ic"] = "@class.inner",
 					},
