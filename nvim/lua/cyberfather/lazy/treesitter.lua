@@ -36,6 +36,8 @@ return {
 					keymaps = {
 						["af"] = "@function.outer",
 						["if"] = "@function.inner",
+						["at"] = "@comment.outer",
+						["it"] = "@comment.inner",
 						["al"] = "@loop.outer",
 						["il"] = "@loop.inner",
 						-- ["ai"] = "@conditional.outer",

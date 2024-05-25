@@ -11,6 +11,7 @@ return {
 		require("telescope").setup({
 			defaults = {
 				file_ignore_patterns = {
+					"venv",
 					"node_modules",
 					"target",
 				},
@@ -21,7 +22,11 @@ return {
 		vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
 		vim.keymap.set("n", "<leader>pb", builtin.buffers, {})
 		vim.keymap.set("n", "<C-p>", builtin.git_files, {})
-		vim.keymap.set("n", "<leader>pc", builtin.colorscheme)
+		vim.keymap.set("n", "<leader>pc", function()
+			builtin.colorscheme()
+			vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
+			vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "none", fg = "#89b4fa" })
+		end)
 		vim.keymap.set("n", "<leader>pws", function()
 			local word = vim.fn.expand("<cword>")
 			builtin.grep_string({ search = word })

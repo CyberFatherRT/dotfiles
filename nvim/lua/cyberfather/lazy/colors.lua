@@ -39,13 +39,13 @@ return {
 				disable_background = false,
 			})
 
-			vim.cmd("colorscheme rose-pine")
-
 			ColorMyPencils()
 		end,
 	},
 
 	{ "doums/darcula" },
 	{ "catppuccin/nvim" },
-	{ "rodnaph/vim-color-schemes" },
+	{ "ellisonleao/gruvbox.nvim" },
+	{ "rebelot/kanagawa.nvim" },
+	{ "blazkowolf/gruber-darker.nvim" },
 }
