@@ -33,6 +33,7 @@ return {
 				yaml = require("formatter.filetypes.yaml").prettier,
 				html = require("formatter.filetypes.html").prettier,
 				css = require("formatter.filetypes.css").prettier,
+				proto = require("formatter.filetypes.proto").buf_format,
 				json = function()
 					return {
 						exe = "prettier",

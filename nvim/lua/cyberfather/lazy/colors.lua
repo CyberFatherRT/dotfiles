@@ -48,4 +48,5 @@ return {
 	{ "ellisonleao/gruvbox.nvim" },
 	{ "rebelot/kanagawa.nvim" },
 	{ "blazkowolf/gruber-darker.nvim" },
+	{ "oxfist/night-owl.nvim" },
 }
