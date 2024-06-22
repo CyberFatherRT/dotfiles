@@ -37,6 +37,17 @@ return {
 					})
 				end,
 
+				["clangd"] = function()
+					require("lspconfig").clangd.setup({
+						on_attach = function(client, bufnr)
+							local buf_ft = vim.api.nvim_buf_get_option(bufnr, "filetype")
+							if buf_ft == "proto" then
+								client.stop()
+							end
+						end,
+					})
+				end,
+
 				["lua_ls"] = function()
 					local lspconfig = require("lspconfig")
 					lspconfig.lua_ls.setup({
