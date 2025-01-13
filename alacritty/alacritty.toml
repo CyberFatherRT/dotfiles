@@ -3,4 +3,7 @@ background = "#000000"
 foreground = '#dddddd'
 
 [window]
-opacity = 0.8
+opacity = 0.80
+
+# [font.normal]
+# family = "FantasqueSansM Nerd Font"

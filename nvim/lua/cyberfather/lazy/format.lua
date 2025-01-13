@@ -22,7 +22,7 @@ return {
 				rust = require("formatter.filetypes.rust").rustfmt,
 				cpp = c,
 				c = c,
-				go = require("formatter.filetypes.go").gofmt,
+				kotlin = require("formatter.filetypes.kotlin").ktlint,
 				sh = require("formatter.filetypes.sh").shfmt,
 				lua = require("formatter.filetypes.lua").stylua,
 				python = require("formatter.filetypes.python").ruff,
@@ -34,12 +34,12 @@ return {
 				html = require("formatter.filetypes.html").prettier,
 				css = require("formatter.filetypes.css").prettier,
 				proto = require("formatter.filetypes.proto").buf_format,
+				ruby = require("formatter.filetypes.ruby").rubocop,
 				json = function()
 					return {
 						exe = "prettier",
 						args = {
 							"--stdin-filepath",
-							"--no-config",
 							util.escape_path(util.get_current_buffer_file_path()),
 						},
 						stdin = true,

@@ -15,4 +15,5 @@ return {
 	-- "github/copilot.vim", -- fuck you
 	"eandrju/cellular-automaton.nvim",
 	"gpanders/editorconfig.nvim",
+	"hashivim/vim-terraform",
 }
