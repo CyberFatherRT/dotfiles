@@ -16,7 +16,7 @@ return {
 		config = function()
 			local rfc = require("rfc")
 			rfc.setup({
-				rfc_dir = "/home/cyberfather/.local/share/nvim/rfc.nvim",
+				rfc_dir = vim.fn.expand("$HOME/.local/share/nvim/rfc.nvim"),
 			})
 
 			vim.keymap.set("n", "<leader>rf", function()
