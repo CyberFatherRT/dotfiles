@@ -1,0 +1,64 @@
+return {
+	"yetone/avante.nvim",
+	event = "VeryLazy",
+	enabled = false,
+	lazy = false,
+	version = false,
+	opts = {
+		auto_suggestions_provider = "copilot",
+		provider = "copilot",
+		copilot = {
+			endpoint = "https://api.githubcopilot.com",
+			model = "gpt-4o-2024-08-06",
+			proxy = "socks5://socksuser:!^10o1CL1*vk80y1PE$qGn!KY^DAJb20@212.113.100.128:1080",
+			allow_insecure = false,
+			timeout = 30000,
+			temperature = 0,
+			max_tokens = 4096,
+		},
+		openai = {
+			endpoint = "https://api.openai.com/v1",
+			model = "gpt-4o",
+			timeout = 30000,
+			temperature = 0,
+			max_tokens = 4096,
+		},
+		behaviour = {
+			auto_suggestions = true,
+		},
+	},
+	build = "make",
+	dependencies = {
+		"nvim-treesitter/nvim-treesitter",
+		"stevearc/dressing.nvim",
+		"nvim-lua/plenary.nvim",
+		"MunifTanjim/nui.nvim",
+		"echasnovski/mini.pick",
+		"nvim-telescope/telescope.nvim",
+		"hrsh7th/nvim-cmp",
+		"ibhagwan/fzf-lua",
+		"nvim-tree/nvim-web-devicons",
+		"zbirenbaum/copilot.lua",
+		{
+			"HakonHarnes/img-clip.nvim",
+			event = "VeryLazy",
+			opts = {
+				default = {
+					embed_image_as_base64 = false,
+					prompt_for_file_name = false,
+					drag_and_drop = {
+						insert_mode = true,
+					},
+					use_absolute_path = true,
+				},
+			},
+		},
+		{
+			"MeanderingProgrammer/render-markdown.nvim",
+			opts = {
+				file_types = { "markdown", "Avante" },
+			},
+			ft = { "markdown", "Avante" },
+		},
+	},
+}

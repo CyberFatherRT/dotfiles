@@ -3,7 +3,8 @@ background = "#000000"
 foreground = '#dddddd'
 
 [window]
-opacity = 0.80
+opacity = 0.85
 
-# [font.normal]
+[font.normal]
+# family = "JetBrains Mono"
 # family = "FantasqueSansM Nerd Font"

@@ -15,6 +15,34 @@ return {
 			}
 		end
 
+		local yaml = function()
+			return {
+				exe = "prettier",
+				args = {
+					"--tab-width",
+					"2",
+					"--stdin-filepath",
+					util.escape_path(util.get_current_buffer_file_path()),
+				},
+				stdin = true,
+				try_node_modules = false,
+			}
+		end
+
+		local js = function()
+			return {
+				exe = "prettier",
+				args = {
+					"--tab-width",
+					"4",
+					"--stdin-filepath",
+					util.escape_path(util.get_current_buffer_file_path()),
+				},
+				stdin = true,
+				try_node_modules = true,
+			}
+		end
+
 		require("formatter").setup({
 			logging = true,
 			log_level = vim.log.levels.WARN,
@@ -27,10 +55,11 @@ return {
 				lua = require("formatter.filetypes.lua").stylua,
 				python = require("formatter.filetypes.python").ruff,
 				svelte = require("formatter.filetypes.svelte").prettier,
-				typescript = require("formatter.filetypes.typescript").prettier,
-				javascript = require("formatter.filetypes.javascript").prettier,
+				typescriptreact = js,
+				typescript = js,
+				javascript = js,
 				tex = require("formatter.defaults.latexindent"),
-				yaml = require("formatter.filetypes.yaml").prettier,
+				yaml = yaml,
 				html = require("formatter.filetypes.html").prettier,
 				css = require("formatter.filetypes.css").prettier,
 				proto = require("formatter.filetypes.proto").buf_format,

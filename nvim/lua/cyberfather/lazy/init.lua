@@ -16,4 +16,5 @@ return {
 	"eandrju/cellular-automaton.nvim",
 	"gpanders/editorconfig.nvim",
 	"hashivim/vim-terraform",
+	"towolf/vim-helm",
 }

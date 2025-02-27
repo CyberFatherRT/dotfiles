@@ -136,3 +136,27 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 	group = format_sync_grp,
 })
+
+vim.api.nvim_create_augroup("YamlIndent", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+	group = "YamlIndent",
+	pattern = "yaml",
+	callback = function()
+		vim.opt_local.shiftwidth = 2
+		vim.opt_local.tabstop = 2
+		vim.opt_local.softtabstop = 2
+		vim.opt_local.expandtab = true
+	end,
+})
+
+vim.api.nvim_create_augroup("HelmIndent", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+	group = "HelmIndent",
+	pattern = "helm",
+	callback = function()
+		vim.opt_local.shiftwidth = 2
+		vim.opt_local.tabstop = 2
+		vim.opt_local.softtabstop = 2
+		vim.opt_local.expandtab = true
+	end,
+})
